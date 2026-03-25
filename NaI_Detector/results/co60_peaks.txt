@@ -1,0 +1,10 @@
+# Co-60 Spectrum Analysis Summary
+# Input          : build/results/energy_spectrum_co60.txt
+# Raw counts     : 2518
+# NaI resolution : R = 7% @ 662 keV  (a=1.8011 sqrt-keV)
+
+Compton edge 1 (1173.2 keV line) : 963.39 keV
+Compton edge 2 (1332.5 keV line) : 1118.11 keV
+
+Peak 1173.2 keV | fitted μ=1171.48 keV | FWHM=65.16 keV | R=5.56%
+Peak 1332.5 keV | fitted μ=1332.95 keV | FWHM=65.86 keV | R=4.94%

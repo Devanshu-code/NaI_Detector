@@ -1,0 +1,18 @@
+# run2_co60.mac — Co-60 quick test, 200 events (100 per line)
+
+/run/initialize
+
+/gps/particle gamma
+/gps/pos/type Point
+/gps/pos/centre 0. 0. -7.5 cm
+/gps/ang/type iso
+
+# Line 1: 1173.2 keV
+/gps/ene/type Mono
+/gps/ene/mono 1.1732 MeV
+/run/beamOn 100
+
+# Line 2: 1332.5 keV
+/gps/ene/type Mono
+/gps/ene/mono 1.3325 MeV
+/run/beamOn 100

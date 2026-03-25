@@ -1,0 +1,36 @@
+# run1_co60.mac — Co-60 point source, 100,000 events
+# Source is 7.5 cm in front of the NaI crystal face (z = -7.5 cm)
+#
+# Co-60 decays to Ni-60 via beta, emitting TWO coincident gamma rays:
+#   1173.2 keV (~99.85% intensity)
+#   1332.5 keV (~99.98% intensity)
+#
+# Strategy: simulate both lines independently in equal proportion
+# using GPS biasing (each event fires one gamma chosen randomly 50/50).
+# For a real coincidence summing study use a custom PrimaryGeneratorAction,
+# but for individual photopeak analysis this is the standard approach.
+
+/run/initialize
+
+# --- GPS multi-source: two mono-energetic lines ---
+/gps/particle gamma
+/gps/pos/type Point
+/gps/pos/centre 0. 0. -7.5 cm
+/gps/ang/type iso
+
+# Enable multiple energy components
+/gps/ene/type Lin
+/gps/hist/type energy
+
+# Use a bimodal histogram: spike at 1.1732 MeV and 1.3325 MeV
+# Achieved cleanly by running two separate /run/beamOn calls
+
+# --- Line 1: 1173.2 keV ---
+/gps/ene/type Mono
+/gps/ene/mono 1.1732 MeV
+/run/beamOn 50000
+
+# --- Line 2: 1332.5 keV ---
+/gps/ene/type Mono
+/gps/ene/mono 1.3325 MeV
+/run/beamOn 50000

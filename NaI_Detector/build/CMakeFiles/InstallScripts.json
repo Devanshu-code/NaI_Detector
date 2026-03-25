@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/devanshu/geant4-work/NaI_Detector/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

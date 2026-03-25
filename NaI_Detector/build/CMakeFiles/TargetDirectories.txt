@@ -1,0 +1,4 @@
+/Users/devanshu/geant4-work/NaI_Detector/build/CMakeFiles/nai_detector.dir
+/Users/devanshu/geant4-work/NaI_Detector/build/CMakeFiles/NaI_Detector.dir
+/Users/devanshu/geant4-work/NaI_Detector/build/CMakeFiles/edit_cache.dir
+/Users/devanshu/geant4-work/NaI_Detector/build/CMakeFiles/rebuild_cache.dir
